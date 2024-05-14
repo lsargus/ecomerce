@@ -1,0 +1,83 @@
+<!-- book/templates/book/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Books</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 40px;
+            color: #333;
+        }
+        h1 {
+            color: #5a5a5a;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin-bottom: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .book-info {
+            flex-grow: 1;
+        }
+        strong {
+            color: #333;
+            font-size: 1.2em;
+        }
+        .book-details {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .edit-button, .delete-button {
+        padding: 5px 10px;
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px; /* Adiciona margem à direita do botão Edit */
+        }
+        .delete-button {
+            background-color: #FF6347; /* Tomato */
+            margin-right: 0; /* Remove a margem à direita do botão Delete */
+        }
+        .edit-button {
+            background-color: #FFA500; /* Orange */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Books</h1>
+    <a href="{% url 'add_book' %}" class="add-book-button">Add New Book</a>
+    <ul>
+        {% for book in books %}
+            <li>
+                <div class="book-info">
+                    <strong>{{ book.title }}</strong> by {{ book.author }}<br>
+                    <span class="book-details">
+                        ISBN: {{ book.isbn }}<br>
+                        Price: ${{ book.price }}<br>
+                        Stock: {{ book.stock }} units
+                    </span>
+                </div>
+                <a href="{% url 'edit_book' book.id %}" class="edit-button">Edit</a>
+                <a href="{% url 'delete_book' book.id %}" class="delete-button" onclick="return confirm('Are you sure you want to delete this book?');">Delete</a>
+            </li>
+        {% empty %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
