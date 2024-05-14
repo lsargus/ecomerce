@@ -1,0 +1,62 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 40px;
+    color: #333;
+}
+
+h1 {
+    color: #5a5a5a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-info {
+    flex-grow: 1;
+}
+
+strong {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.book-details {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Adiciona margem à direita do botão Edit */
+}
+
+.delete-button {
+    background-color: #FF6347; /* Tomato */
+    margin-right: 0; /* Remove a margem à direita do botão Delete */
+}
+
+.edit-button {
+    background-color: #FFA500; /* Orange */
+}
+
+    
