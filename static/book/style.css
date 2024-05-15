@@ -1,0 +1,137 @@
+/* Reset básico para HTML e body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configurações do Flexbox para alinhamento de conteúdo */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+/* Estilos globais para o rodapé */
+footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* altura do rodapé */
+  }
+
+/* Estilos para formatação dos botões no rodapé */
+.footer .btn-dark {
+    background-color: #000;
+    border: none;
+}
+
+/* Estilização dos inputs no rodapé */
+.footer input[type="text"],
+.footer input[type="email"] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para ícones de redes sociais no rodapé */
+.footer .bi {
+    font-size: 1.5rem;
+}
+
+/* Estilos customizados para o navbar */
+.navbar-custom {
+    background-color: rgb(25,135,84); /* Verde escuro */
+}
+
+/* Ajustes para os controles do carrossel (Owl Carousel) */
+.owl-carousel .item {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform .5s ease;
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.1);
+}
+
+.owl-next {
+    float: right;
+}
+
+.owl-prev {
+    float: left;
+}
+
+.owl-prev span, .owl-next span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para o formulário de busca */
+.form-control {
+    border: 2px solid #28a745;
+    border-radius: 0.25rem 0 0 0.25rem;
+    box-shadow: none;
+    height: 43px;
+    width: calc(70% - 38px); /* Ajuste para combinar com o tamanho do botão */
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.btn-success {
+    border: 2px solid #28a745;
+    background-color: #28a745;
+    color: white;
+    border-radius: 0 0.25rem 0.25rem 0;
+    height: 42px;
+    width: 43px;
+}
+
+/* Remoção do espaçamento padrão à direita do input */
+.form-control.me-0 {
+    margin-right: 0;
+}
+
+/* Ajustando a largura do formulário de busca para preenchimento total */
+form.d-flex {
+    max-width: 100%;
+    width: auto;
+}
+
+/* Estilos para seções específicas com gradientes e texturas */
+.buttermilk {
+    background: linear-gradient(#fff7ef, #fff);
+    padding: 50px 40px;
+    border: 1px solid #efe8e1;
+    padding-bottom: 20px;
+}
+
+.smbg, .curdbgpro {
+    background-color: #fff;
+    background-image: linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+}
+
+.goodnessseccont img {
+    width: 100%;
+}
+
+.mlkpro {
+    color: #636362;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    width: 43%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.goodnesssec a {
+    text-decoration: none;
+}
