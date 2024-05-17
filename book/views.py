@@ -60,5 +60,6 @@ def delete_book_view(request, book_id):
         return render(request, 'error.html', {'message': 'Failed to delete the book.'})  # Uma página de erro genérica
 
 def home(request):
-    return render(request, "book/base.html")
+    books = get_books()
+    return render(request, "book/base.html", {'books': books})
 
